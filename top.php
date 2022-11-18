@@ -27,7 +27,7 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">White Shirt</h5>
                                 <!-- Product price-->
-                                299฿
+                                ฿299.00
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -47,7 +47,7 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">Red Shirt</h5>
                                 <!-- Product price-->
-                                299฿
+                                ฿299.00
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -68,7 +68,7 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">Blue Shirt</h5>
                                 <!-- Product price-->
-                                369฿
+                                ฿369.00
                             </div>
                         </div>
                         <!-- Product actions-->

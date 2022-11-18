@@ -71,8 +71,6 @@
             </div>
         </div>
 
-        <footer class="py-5 bg-dark fixed-bottom">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Seed & Flower LLC.</p></div>
-        </footer>
+        <?php include "func/footer.html"; ?>
     </body>
 </html>

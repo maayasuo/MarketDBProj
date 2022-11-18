@@ -27,7 +27,7 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">Sneaker</h5>
                                 <!-- Product price-->
-                                679฿
+                                ฿679.00
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -47,7 +47,7 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">Leather Shoe</h5>
                                 <!-- Product price-->
-                                879฿
+                                ฿879.00
                             </div>
                         </div>
                         <!-- Product actions-->
