@@ -20,6 +20,6 @@
             </div>
         </div>
 
-        <?php include "func/footer.html"; ?>
+        <?php include "func/footer_longpage.html"; ?>
     </body>
 </html>

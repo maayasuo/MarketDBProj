@@ -216,7 +216,7 @@
       </div>
   </section>
 
-  <?php include "func/footer.html"; ?>
+  <?php include "func/footer_longpage.html"; ?>
 
   </body>
 </html>
