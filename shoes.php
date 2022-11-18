@@ -8,42 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
    </head>
   <body>
-    <!-- Navigation         The header element that has to be the same on every page -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="index.html">
-              <img src="asset/logo.png" alt="Avatar Logo" style="width:50px;"> 
-            </a>
-            <a class="navbar-brand" href="index.html"><h4>My shop</h4></a>     <!--SHOP NAME-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.php">Login/Register</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="all_product.html">All Products</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#Website Link or sth!">Popular Items</a></li>       <!-- OUR PRODUCT TYPE WILL BE IN HERE I GUESS -->
-                            <li><a class="dropdown-item" href="#Website Link or sth!">New Arrivals</a></li>        <!-- Fix this later on -->
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <button class="btn btn-outline-light" type="submit">
-                        <i class="bi-cart-fill me-1"></i>
-                        Cart
-                        <span class="badge bg-light text-black ms-1 rounded-pill">0</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-      </nav>  
+    <?php include "func/navbar.php"; ?>
 
     <!-- Section-->
-    <section class="">
+    <section class="mb-5">
       <div class="container px-4 px-lg-5 mt-5">
+        <h2>Shoes</h2>
+        <p class="mb-5">This is the finest products we have hand-picked. Just for you.</p>
           <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
               <div class="col mb-5">
                   <div class="card h-100">
@@ -244,5 +215,8 @@
           </div>
       </div>
   </section>
+
+  <?php include "func/footer.html"; ?>
+
   </body>
 </html>

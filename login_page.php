@@ -14,7 +14,7 @@
     <div class="container px-2 px-lg-3 my-5">
       <div class="row">
         <div class="col">
-          <div class="container border rounded px-4 px-lg-5 mt-5 bt-5">
+          <div class="container border rounded px-4 px-lg-5 mt-4 bt-5">
             <div class="mb-4 mt-5">
               <h1>Login</h1>
               <p></p>
@@ -29,6 +29,12 @@
                 <label for="password" class="form-label">Password:</label>
                 <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
               </div>
+              <?php
+                if(isset($_SESSION['loginerror'])){
+                  unset($_SESSION['loginerror']);
+                  ?><p class="text-danger">*Incorrect username or password.</P><?php
+                }
+              ?>
               <div class="mt-4 mb-5">
                 <button type="submit" name="login_submit" class="btn btn-primary">Login</button>
               </div>
@@ -37,7 +43,7 @@
         </div>
         <div class="col-md-1"></div>
         <div class="col">
-          <div class="container border rounded px-4 px-lg-5 mt-5 bt-5">
+          <div class="container border rounded px-4 px-lg-5 mt-4 bt-5">
             <div class="mb-4 mt-5">
               <h1>Sign up</h1>
               <p></p>
