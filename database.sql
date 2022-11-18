@@ -20,6 +20,7 @@ CREATE TABLE product_type(
 CREATE TABLE product(
 	pID int(3) NOT NULL PRIMARY KEY,
 	pname VARCHAR(10) NOT NULL,
+	pimage VARCHAR(350) NOT NULL,
 	price int(4) NOT NULL
 	isfeature CHAR(1) 
 	-- pamount int(3)
@@ -31,18 +32,14 @@ CREATE TABLE promocode(
 	-- camount int(3)
 );
 
-CREATE TABLE cartList(
+
+CREATE TABLE cart(
+
+	pID int(3) NOT NULL,
 	cartID VARCHAR(6) NOT NULL PRIMARY KEY,
 	cusername VARCHAR(10) NOT NULL,
 	CONSTRAINT FK_username FOREIGN KEY (cusername)
 	REFERENCES user(username)
-);
-
-CREATE TABLE cart(
-	userID 
-	pID int(3) NOT NULL,
-	CONSTRAINT FK_cartID  FOREIGN KEY (cartID)
-	REFERENCES cartList(cartID),
 	CONSTRAINT FK_pID  FOREIGN KEY (pID)
 	REFERENCES product(pID)
 );
