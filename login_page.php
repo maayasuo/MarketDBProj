@@ -48,6 +48,16 @@
                     <h1>Sign up</h1>
                     <p></p>
                     <p>Please fill in this form to create an account.</p>
+                    <?php
+                        if (isset($_SESSION['signupsuccess'])) {
+                            unset($_SESSION['signupsuccess']);
+                            ?><p class="text-info">*Sign up success. Please login using your infomation you registered.</P><?php 
+                        }?>
+                    <?php
+                        if (isset($_SESSION['unmatchpassword'])) {
+                            unset($_SESSION['unmatchpassword']);
+                            ?><p class="text-danger">*Unmatched password. Please try again.</P><?php 
+                        }?>
                 </div>
                 <form action="func/register.php" method="post">
                     <div class="mb-3 mt-3">
@@ -85,6 +95,11 @@
                     <div class="mb-3">
                         <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
                     </div>
+                    <?php
+                        if (isset($_SESSION['signuperror'])) {
+                            unset($_SESSION['signuperror']);
+                            ?><p class="text-danger">*An error occur. Please try again.</P><?php 
+                        }?>
                     <div class="mt-4 mb-5">
                         <button type="submit" name="signup_submit" class="btn btn-primary">Sign up</button>
                     </div>
