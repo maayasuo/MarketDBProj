@@ -17,7 +17,7 @@
         <div class="col">
             <div class="container border rounded px-4 px-lg-5 mt-4 bt-5">
                 <div class="mb-4 mt-5">
-                    <h1>Login</h1>
+                    <h1>Sign in</h1>
                     <p></p>
                     <p>Please enter your info to continue.</p>
                 </div>
@@ -35,23 +35,33 @@
                             unset($_SESSION['loginerror']);
                             ?><p class="text-danger">*Incorrect username or password.</P><?php 
                         }?>
+                    <?php if(isset($_SESSION['nouser'])){
+                        unset($_SESSION['nouser']);?>
+                        <div class="d-flex justify-content-md-center pt-5">
+                            <div class="text-center">
+                                <img class="d-block mx-auto mb-4" src="https://uxwing.com/wp-content/themes/uxwing/download/checkmark-cross/cancel-icon.svg" alt="" width="72" height="72">
+                                <h2 class="mb-4">You are not signed in!</h2>
+                                <p class="lead">You haven't sign in into your account.<br>Please sign in first before adding product to your account.</p>
+                            </div>
+                        </div>
+                    <?php } ?>
                     <div class="mt-4 mb-5">
-                        <button type="submit" name="login_submit" class="btn btn-primary">Login</button>
+                        <button type="submit" name="login_submit" class="btn btn-primary">Sign in</button>
                     </div>
                 </form>
             </div>
         </div>
         <div class="col-md-1"></div>
         <div class="col">
-            <div class="container border rounded px-4 px-lg-5 mt-4 bt-5">
+            <div class="container border rounded px-4 px-lg-5 my-4 bt-5">
                 <div class="mb-4 mt-5">
-                    <h1>Sign up</h1>
+                    <h1>Register</h1>
                     <p></p>
                     <p>Please fill in this form to create an account.</p>
                     <?php
                         if (isset($_SESSION['signupsuccess'])) {
                             unset($_SESSION['signupsuccess']);
-                            ?><p class="text-info">*Sign up success. Please login using your infomation you registered.</P><?php 
+                            ?><p class="text-info">*Registeration success. Please sign in using your infomation you registered.</P><?php 
                         }?>
                     <?php
                         if (isset($_SESSION['unmatchpassword'])) {

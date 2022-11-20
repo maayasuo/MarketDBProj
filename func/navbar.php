@@ -1,13 +1,13 @@
 <?php 
-    // require_once('connect.php');
+    require_once('connect.php');
     session_start();
 ?>
 
 <!-- Navigation         The header element that has to be the same on every page -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#004AAD">
 <div class="container px-4 px-lg-5">
     <a class="navbar-brand" href="index.php">
-        <img src="asset/logo.png" alt="Avatar Logo" style="width:50px;"> 
+        <img src="asset/logo2.png" alt="Avatar Logo" style="width:50px;"> 
     </a>
     <a class="navbar-brand" href="index.php"><h4>The Closet</h4></a>     <!--SHOP NAME-->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -30,19 +30,31 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo 'Hello! '. $_SESSION['username'];?></a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="info_page.php">Edit infomation</a></li>
+                            <li><hr class="dropdown-divider" /></li>
                             <li><a class="dropdown-item" href="func/logout.php">Logout</a></li>
+                            
                         </ul>
                     </li>
                     <?php } else{?>
-                    <li class="nav-item"><a class="nav-link" href="login_page.php">Login/Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login_page.php">Sign in/Register</a></li>
                     <?php }
             ?>
         </ul>
+
+        <?php
+            if(isset($_SESSION['username'])){
+                $q = "SELECT count(c.pID) AS amount, price FROM cart c JOIN product p ON c.pID = p.pID WHERE userID = '".$_SESSION['userID']."' GROUP BY c.pID";
+                $result=$mysqli->query($q);
+                $count=$result->num_rows;
+            }
+            else{$count = 0;}
+        ?>
         <form class="d-flex" action="cart.php" method="post">
             <button class="btn btn-outline-light" type="summit">
                 <i class="bi-cart-fill me-1"></i>
                 Cart
-                <span class="badge bg-light text-black ms-1 rounded-pill">0</span>
+                <span class="badge bg-light text-black ms-1 rounded-pill"><?php echo $count ?></span>
             </button>
         </form>
     </div>

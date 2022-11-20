@@ -13,70 +13,41 @@
     <!-- Section-->
     <section class="mb-5">
       <div class="container px-4 px-lg-5 mt-5">
-        <h2>Shoes</h2>
+        <h2>Top</h2>
         <p class="mb-5">This is the finest products we have hand-picked. Just for you.</p>
           <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
               
+          <?php 
+            $q = "SELECT * FROM product WHERE ptype=\"a\"";
+            $result=$mysqli->query($q);
+            while($row=$result->fetch_array()){?>
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top border-bottom" src="asset/product/top/t1.jpg" alt="..." />
+                        <img class="card-img-top border-bottom" src="<?php echo $row['pimagedir'] ?>" alt="..." />
                         <!-- Product details-->
-                        <div class="card-body p-4">
+                        <div class="card-body bg-mute p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">White Shirt</h5>
+                                <h5 class="fw-bolder"><?php echo $row['pname'] ?></h5>
                                 <!-- Product price-->
-                                ฿299.00
+                                ฿<?php echo $row['price'] ?>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top border-bottom" src="asset/product/top/t2.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
                             <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Red Shirt</h5>
-                                <!-- Product price-->
-                                ฿299.00
+                                <form action="func/addtocart.php" method="post">
+                                    <div type="submit" class="text-center">
+                                        <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-outline-dark mt-auto" value="Add to Cart" />
+                                        <input type="hidden" name="productID" value="<?php echo $row['pID'] ?>"></input>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
                     </div>
                 </div>
-
-
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top border-bottom" src="asset/product/top/t3.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Blue Shirt</h5>
-                                <!-- Product price-->
-                                ฿369.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
-                    </div>
-                </div>
+            <?php }?>
 
           </div>
       </div>

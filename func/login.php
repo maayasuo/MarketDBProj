@@ -18,8 +18,9 @@ if(isset($_POST['login_submit'])) {
 
     $count = $result->num_rows;
     if($count==1){
+        $row=$result->fetch_array();
+        $_SESSION['userID'] = $row['userID'];
         $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
         $_SESSION['logged_in'] = time();
         header( "Location: ../index.php" );
         die();
