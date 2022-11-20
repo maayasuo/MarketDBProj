@@ -76,7 +76,7 @@
                 <?php } else {?>
                     <div class="d-flex justify-content-md-center align-items-center vh-100 p-5">
                         <div class="py-5 text-center">
-                            <img class="d-block mx-auto mb-4" src="info_icon.svg" alt="" width="72" height="72">
+                            <img class="d-block mx-auto mb-4" src="asset/info_icon.svg" alt="" width="72" height="72">
                             <h2 class="mb-4">Your cart is empty!</h2>
                             <p class="lead">Please add items to your cart first before checkout.</p>
                         </div>
@@ -85,7 +85,7 @@
             else {?> 
                 <div class="d-flex justify-content-md-center align-items-center vh-100 p-5">
                     <div class="py-5 text-center">
-                        <img class="d-block mx-auto mb-4" src="info_icon.svg" alt="" width="72" height="72">
+                        <img class="d-block mx-auto mb-4" src="asset/info_icon.svg" alt="" width="72" height="72">
                         <h2 class="mb-4">You are not signed in!</h2>
                         <p class="lead">You haven't sign in into your account.<br>Please sign in first before adding product to your account.</p>
                     </div>
