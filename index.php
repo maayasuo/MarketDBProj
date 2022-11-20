@@ -67,7 +67,7 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder"><?php echo $row['pname'] ?></h5>
                                 <!-- Product price-->
-                                ฿<?php echo $row['price'] ?>
+                                ฿<?php echo number_format($row['price'], 2, '.', ',') ?>
                             </div>
                         </div>
                         <!-- Product actions-->
