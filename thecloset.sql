@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2022 at 06:54 PM
+-- Generation Time: Nov 20, 2022 at 05:27 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -91,8 +91,17 @@ INSERT INTO `product_type` (`ptype`, `tname`) VALUES
 
 CREATE TABLE `promocode` (
   `codeID` varchar(10) NOT NULL,
-  `percentDiscounted` decimal(5,0) NOT NULL
+  `percentDiscounted` decimal(5,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `promocode`
+--
+
+INSERT INTO `promocode` (`codeID`, `percentDiscounted`) VALUES
+('BIGPROMO50', '0.50'),
+('FASHION65', '0.65'),
+('SPECIAL60', '0.60');
 
 -- --------------------------------------------------------
 
@@ -103,12 +112,20 @@ CREATE TABLE `promocode` (
 CREATE TABLE `user` (
   `userID` int(10) NOT NULL,
   `username` varchar(10) NOT NULL,
-  `pass` varchar(10) NOT NULL,
+  `email` varchar(32) NOT NULL,
+  `pass` varchar(32) NOT NULL,
   `fname` varchar(20) NOT NULL,
   `lname` varchar(20) NOT NULL,
   `uAddress` varchar(300) NOT NULL,
   `phone` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`userID`, `username`, `email`, `pass`, `fname`, `lname`, `uAddress`, `phone`) VALUES
+(3, 'takina2004', 'inoue_t@lycorico.co.jp', '81dc9bdb52d04dc20036dbd8313ed055', 'Takina', 'Inoue', '2830 Crescent Cove Drive', '9704517425');
 
 --
 -- Indexes for dumped tables
@@ -147,6 +164,16 @@ ALTER TABLE `promocode`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`userID`),
   ADD UNIQUE KEY `username` (`username`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `userID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
