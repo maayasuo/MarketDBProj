@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home page</title>
+        <title>Cart | The Closet official store</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     </head>
@@ -59,7 +59,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <?php if(isset($_SESSION['promoerror'])) {?>
+                            <?php if(isset($_SESSION['promoerror'])) { unset($_SESSION['promoerror']); ?>
                             <p class="text-warning">*Please enter a valid promo code</P> <?php }?>
                             <form action="func/checkout.php" method="post">
                                 <div class="row justify-content-center">
@@ -76,7 +76,7 @@
                 <?php } else {?>
                     <div class="d-flex justify-content-md-center align-items-center vh-100 p-5">
                         <div class="py-5 text-center">
-                            <img class="d-block mx-auto mb-4" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Info_icon-72a7cf.svg" alt="" width="72" height="72">
+                            <img class="d-block mx-auto mb-4" src="info_icon.svg" alt="" width="72" height="72">
                             <h2 class="mb-4">Your cart is empty!</h2>
                             <p class="lead">Please add items to your cart first before checkout.</p>
                         </div>
@@ -85,7 +85,7 @@
             else {?> 
                 <div class="d-flex justify-content-md-center align-items-center vh-100 p-5">
                     <div class="py-5 text-center">
-                        <img class="d-block mx-auto mb-4" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Info_icon-72a7cf.svg" alt="" width="72" height="72">
+                        <img class="d-block mx-auto mb-4" src="info_icon.svg" alt="" width="72" height="72">
                         <h2 class="mb-4">You are not signed in!</h2>
                         <p class="lead">You haven't sign in into your account.<br>Please sign in first before adding product to your account.</p>
                     </div>
