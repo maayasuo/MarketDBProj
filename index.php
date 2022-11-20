@@ -28,13 +28,13 @@
         <!-- The slideshow/carousel -->
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="asset/unknown4564-2to1.png" alt="drip" class="d-block w-100">
+            <img src="asset/promo/promo1.png" alt="drip" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="asset/unknown-2to1.jpg" alt="bond" class="d-block w-100">
+            <img src="asset/promo/promo2.png" alt="bond" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="asset/albono-2to1.jpg" alt="albono" class="d-block w-100">
+            <img src="asset/promo/promo3.png" alt="albono" class="d-block w-100">
           </div>
         </div>
 
