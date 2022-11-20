@@ -7,7 +7,7 @@ if(isset($_POST['login_submit'])) {
     
     session_start();
     
-    $q = "SELECT * FROM user WHERE username='".$username."' and pass='".$password."'" ;
+    $q = "SELECT * FROM user WHERE pass='".$password."' AND username='".$username."'" ;
     $result = $mysqli->query($q);
     
     if(!$result) {
