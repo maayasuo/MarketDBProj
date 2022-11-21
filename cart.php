@@ -12,6 +12,9 @@
         <?php 
             if(isset($_SESSION['username'])){
                 $q = "SELECT pname, count(c.pID) AS amount, price FROM cart c JOIN product p ON c.pID = p.pID WHERE userID = '".$_SESSION['userID']."' GROUP BY c.pID";
+                $qshow = "SELECT * FROM cart WHERE userID = '".$_SESSION['userID']."'";
+                $show=$mysqli->query($qshow);
+                $sumpro=$show->num_rows;
                 $result=$mysqli->query($q);
                 $count=$result->num_rows;
                 if($count != 0){?>
@@ -19,7 +22,7 @@
                         <div class="container- border rounded px-4 px-lg-5 mt-5 bt-5 mb-5">
                             <h4 class="d-flex justify-content-between align-items-center mb-1 mt-4">
                                 <span class="text">Your cart</span>
-                                <span class="badge bg-secondary rounded-pill"><?php echo $count?></span>
+                                <span class="badge bg-secondary rounded-pill"><?php echo $sumpro?></span>
                             </h4>
                             <p class="text-muted mb-4">Please check your items in the cart before proceed.</p>
                             <ul class="list-group mb-3">

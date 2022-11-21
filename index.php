@@ -44,7 +44,7 @@
 
         <div class="container-fluid py-2 mt-4">
           <h3>Featured Product</h3>
-          <p>This is the products we proudly present lmao. Please for Christ sake please help me, anyone.</p>
+          <p>This is the products we proudly present lmao. Favortie among us people like it a lot. Love love. Please for Christ sake please help me, anyone.</p>
         </div>
       </div>
     </div>

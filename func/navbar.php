@@ -44,9 +44,9 @@
 
         <?php
             if(isset($_SESSION['username'])){
-                $q = "SELECT count(c.pID) AS amount, price FROM cart c JOIN product p ON c.pID = p.pID WHERE userID = '".$_SESSION['userID']."' GROUP BY c.pID";
-                $result=$mysqli->query($q);
-                $count=$result->num_rows;
+                $qshow = "SELECT * FROM cart WHERE userID = '".$_SESSION['userID']."'";
+                $show=$mysqli->query($qshow);
+                $sumpro=$show->num_rows;
             }
             else{$count = 0;}
         ?>
@@ -54,7 +54,7 @@
             <button class="btn btn-outline-light" type="summit">
                 <i class="bi-cart-fill me-1"></i>
                 Cart
-                <span class="badge bg-light text-black ms-1 rounded-pill"><?php echo $count ?></span>
+                <span class="badge bg-light text-black ms-1 rounded-pill"><?php echo $sumpro ?></span>
             </button>
         </form>
     </div>
