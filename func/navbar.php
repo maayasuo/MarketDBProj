@@ -48,7 +48,7 @@
                 $show=$mysqli->query($qshow);
                 $sumpro=$show->num_rows;
             }
-            else{$count = 0;}
+            else{$sumpro = 0;}
         ?>
         <form class="d-flex" action="cart.php" method="post">
             <button class="btn btn-outline-light" type="summit">

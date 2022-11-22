@@ -72,35 +72,35 @@
                 <form action="func/register.php" method="post">
                     <div class="mb-3 mt-3">
                         <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+                        <input type="email" class="form-control" id="email" required placeholder="Enter Email" name="email">
                     </div>
                     <div class="mb-3">
                         <label for="username" class="form-label">Username:</label>
-                        <input type="username" class="form-control" id="username" placeholder="Enter username" name="username">
+                        <input type="username" class="form-control" id="username"required  placeholder="Enter username" name="username">
                     </div>
                     <div class="mb-3">
                         <label for="fname" class="form-label">First Name:</label>
-                        <input type="fname" class="form-control" id="fname" placeholder="Enter First name" name="fname">
+                        <input type="fname" class="form-control" id="fname" required placeholder="Enter First name" name="fname">
                     </div>
                     <div class="mb-3">
                         <label for="lname" class="form-label">Last Name:</label>
-                        <input type="lname" class="form-control" id="lname" placeholder="Enter Last name" name="lname">
+                        <input type="lname" class="form-control" id="lname" required placeholder="Enter Last name" name="lname">
                     </div>
                     <div class="mb-3">
                         <label for="adress" class="form-label">Address:</label>
-                        <input type="adress" class="form-control" id="address" placeholder="Enter Address" name="address">
+                        <input type="adress" class="form-control" id="address" required placeholder="Enter Address" name="address">
                     </div>
                     <div class="mb-3">
                         <label for="phone" class="form-label">Phone Number:</label>
-                        <input type="phone" class="form-control" id="phone" placeholder="Enter Phone Number" name="phone">
+                        <input type="phone" class="form-control" id="phone" required placeholder="Enter Phone Number" name="phone">
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password:</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+                        <input type="password" class="form-control" id="password" required placeholder="Enter password" name="password">
                     </div>
                     <div class="mb-3">
                         <label for="checkpassword" class="form-label">Confirm password:</label>
-                        <input type="password" class="form-control" id="checkpassword" placeholder="Reenter password" name="checkpassword">
+                        <input type="password" class="form-control" id="checkpassword" required placeholder="Reenter password" name="checkpassword">
                     </div>
                     <div class="mb-3">
                         <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
